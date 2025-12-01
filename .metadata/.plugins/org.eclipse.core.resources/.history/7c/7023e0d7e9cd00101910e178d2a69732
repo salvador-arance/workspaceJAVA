@@ -1,0 +1,26 @@
+package org.cuatrovientos.jv;
+import java.util.Random;
+
+public class RandomArray {
+
+	public static void main(String[] args) {
+		int arrayEnteros[][] = new int[5][5];
+		Random rnd = new Random();
+		
+		for (int i = 0; i < arrayEnteros[i].length; i++) {
+			for (int j = i; j < arrayEnteros[j].length; j++) {
+				arrayEnteros[i][j] = rnd.nextInt(30);
+			}
+		}
+		
+		
+		for (int i = 0; i < arrayEnteros.length; i++) {
+			for (int j = i; j < arrayEnteros[i].length; j++) {
+				System.out.println("Posición: [" + i + "][" + j + "]" + ": " + arrayEnteros[i][j]);
+			}
+		}
+		
+
+	}
+
+}

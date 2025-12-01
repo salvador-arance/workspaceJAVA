@@ -1,0 +1,11 @@
+package org.cuatrovientos.jv;
+
+public class NumberArray {
+
+	public static void main(String[] args) {
+		int[] arrayEnteros = new int[10];
+		
+
+	}
+
+}

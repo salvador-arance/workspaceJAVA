@@ -1,0 +1,26 @@
+package org.cuatrovientos.jv;
+import java.util.Scanner;
+
+public class NumberArray {
+
+	public static void main(String[] args) {
+		Scanner escaner = new Scanner(System.in);
+		String entrada = "";
+		boolean esNumero = false;
+		
+		int[] arrayEnteros = new int[10];
+		for (int i = 0; i < arrayEnteros.length; i++) {
+			System.out.print("Cadena posición " + i + ": ");
+			try {
+				arrayEnteros[i] = entrada
+				esNumero = true;
+
+
+			} catch (NumberFormatException e) {
+				esNumero = false;
+			}
+		}
+
+	}
+
+}

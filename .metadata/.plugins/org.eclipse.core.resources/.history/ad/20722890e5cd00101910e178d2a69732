@@ -1,0 +1,40 @@
+package org.cuatrovientos.jv;
+
+import java.util.Scanner;
+
+public class AverageArray {
+
+	public static void main(String[] args) {
+		Scanner escaner = new Scanner(System.in);
+		String entrada = "";
+		boolean esNumero;
+		float[] arrayFloat = new float[10];
+		float suma = 0, media = 0;
+		
+		for (int i = 0; i < arrayFloat.length; i++) {
+			do {
+				System.out.print("Entero posición " + i + ": ");
+				entrada = escaner.nextLine();
+				try {
+					arrayFloat[i] = Float.parseFloat(entrada);
+					esNumero = true;
+
+				} catch (NumberFormatException e) {
+					esNumero = false;
+				}
+				if (!esNumero) {
+					System.out.println("Por favor, introduce un número entero.");
+				}
+			} while(!esNumero);
+		}
+		
+		for (int i = 0; i < arrayFloat.length; i++) {
+			suma += arrayFloat[i];
+		}
+		
+		media = suma / arrayFloat.length
+		
+		escaner.close();
+	}
+
+}

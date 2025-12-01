@@ -1,0 +1,25 @@
+package org.cuatrovientos.jv;
+import java.util.Scanner;
+
+
+public class NameArray {
+
+	public static void main(String[] args) {
+		Scanner escaner = new Scanner(System.in);
+		String arrayStrings[] = new String[10];
+		
+		for (int i = 0; i < arrayStrings.length; i++) {
+			System.out.print("Cadena posición " + i + ": ");
+			arrayStrings[i] = escaner.nextLine();
+		}
+		
+		System.out.println("Las cadenas guardadas son: ");
+		
+		for (int i = 0; i < arrayStrings.length; i++) {
+			System.out.println("Cadena posición " + i + ": " + arrayStrings[i]);;
+		}
+		
+		escaner.close();
+	}
+
+}
