@@ -63,6 +63,7 @@ public class Horario {
 			System.out.println();
 		}
 		
+		
 		escaner.close();
 	}
 
