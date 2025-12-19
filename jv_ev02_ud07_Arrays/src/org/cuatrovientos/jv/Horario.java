@@ -4,39 +4,38 @@ import java.util.Scanner;
 
 public class Horario {
 
-	private static final int NUMERO_MODULOS_MINIMO = 4;
+	private static final int NUMERO_MODULOS_MINIMO = 1;
 	private static final int HORAS_SEMANALES = 30;
 
 	public static void main(String[] args) {
-		// TODO Finish final print
 		String[] dias = { "Lunes", "Martes", "Mierc", "Jueves", "Viernes" };
 		String[] horas = { "08:30", "09:25", "10:20", "11:45", "12:40", "13:35" };
 		String horario[][] = new String[dias.length][horas.length];
 		String entrada = "";
 		Scanner escaner = new Scanner(System.in);
 		boolean esNumero = false;
-		byte nModulos = 0;
-		byte nHorasTotal = 0;
+		byte numeroModulos = 0;
+		byte numeroHorasTotal = 0;
 		boolean existeElModulo = false;
 
 		do {
-			System.out.print("Introduce la cantidad de módulos (>3): ");
+			System.out.print("Introduce la cantidad de módulos (>=" + NUMERO_MODULOS_MINIMO + "): ");
 			entrada = escaner.nextLine();
 			try {
-				nModulos = Byte.parseByte(entrada);
+				numeroModulos = Byte.parseByte(entrada);
 			} catch (NumberFormatException e) {
 				esNumero = false;
 			}
-			if (!esNumero && nModulos < NUMERO_MODULOS_MINIMO) {
+			if (!esNumero && numeroModulos < NUMERO_MODULOS_MINIMO) {
 				System.out.println("Introduce un número válido de módulos.");
 			}
-		} while (!esNumero && nModulos < NUMERO_MODULOS_MINIMO);
+		} while (!esNumero && numeroModulos < NUMERO_MODULOS_MINIMO);
 
-		String modulos[] = new String[nModulos];
-		byte horasModulos[] = new byte[nModulos];
+		String modulos[] = new String[numeroModulos];
+		byte horasModulos[] = new byte[numeroModulos];
 
 		do {
-			for (int i = 0; i < nModulos; i++) {
+			for (int i = 0; i < numeroModulos; i++) {
 				System.out.print("Introduce el nombre del módulo " + (i + 1) + ": ");
 				modulos[i] = escaner.nextLine().toLowerCase();
 				do {
@@ -53,14 +52,14 @@ public class Horario {
 					}
 				} while (!esNumero);
 			}
-			nHorasTotal = 0;
-			for (int i = 0; i < nModulos; i++) {
-				nHorasTotal += horasModulos[i];
+			numeroHorasTotal = 0;
+			for (int i = 0; i < numeroModulos; i++) {
+				numeroHorasTotal += horasModulos[i];
 			}
-			if (nHorasTotal != HORAS_SEMANALES) {
+			if (numeroHorasTotal != HORAS_SEMANALES) {
 				System.out.println("No cuadra el número de horas, vuelve a intentarlo.");
 			}
-		} while (nHorasTotal != HORAS_SEMANALES);
+		} while (numeroHorasTotal != HORAS_SEMANALES);
 
 		for (int i = 0; i < horario.length; i++) {
 			for (int j = 0; j < horario[0].length; j++) {
