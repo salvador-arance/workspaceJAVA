@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Horario {
 
-	private static final int NUMERO_MODULOS_MINIMO = 1;
+	private static final int NUMERO_MODULOS_MINIMO = 4;
 	private static final int HORAS_SEMANALES = 30;
 
 	public static void main(String[] args) {
