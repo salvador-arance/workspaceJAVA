@@ -23,16 +23,6 @@ public class Coin {
 		}
 		return this.estado;
 	}
-	
-	public void flip2() {
-		Random rnd = new Random();
-		boolean valor = rnd.nextBoolean();
-		if (valor) {
-			this.estado = "PILE";
-		} else {
-			this.estado = "CROSS";
-		}
-	}
 }
 
 
