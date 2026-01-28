@@ -24,7 +24,7 @@ public class MainDice {
 			dadoVeinteCarasResultados[i] = dadoVeinteCaras.roll();
 		}
 		
-		System.out.println(dadoNormalResultados[0] + " " + dadoDiezCarasResultados[0] + " " + dadoVeinteCarasResultados[0]);
+		System.out.println(dadoNormalResultados[99] + " " + dadoDiezCarasResultados[99] + " " + dadoVeinteCarasResultados[99]);
 		
 	}
 
