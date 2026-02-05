@@ -14,14 +14,14 @@ public class ArrayListColores {
 			System.out.println(color);
 		}
 		
-		colores.remove(4);
+		colores.remove("Blanco");
 		
 		boolean encontrado = false;
 		
 		for (String color:colores) {
 			if (color.equals("Blanco")) {
 				encontrado = true;
-				System.out.println(color.indexOf("Blanco"));
+				System.out.println(colores.indexOf("Blanco"));
 			}
 		}
 		
