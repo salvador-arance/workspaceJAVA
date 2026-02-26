@@ -12,8 +12,8 @@ public class GimnasioMain {
 		int aforoActual = 0;
 		
 		do {
-			System.out.println("=========================== \n CONTROL DE ACCESO - CENTRO \n Aforo máximo: " + gym.getAforoMaximoGimnasio() + "\n Ocupación actual: " + aforoActual + "\n ===========================");
-			System.out.println("1. Alta usuario \n 2. Listar Usuarios \n 3. Registrar entrada. \n 4. Registrar Salida. \n 5. Salir.");
+			System.out.println("=========================== \nCONTROL DE ACCESO - CENTRO \nAforo máximo: " + gym.getAforoMaximoGimnasio() + "\nOcupación actual: " + aforoActual + "\n===========================");
+			System.out.println("1. Alta usuario \n2. Listar Usuarios \n3. Registrar entrada. \n4. Registrar Salida. \n5. Salir.");
 			System.out.println("===========================");
 			System.out.print("Introduce una opción: ");
 			entrada = leerPantalla.nextLine();
