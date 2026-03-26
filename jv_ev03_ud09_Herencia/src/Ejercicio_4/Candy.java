@@ -1,10 +1,16 @@
 package Ejercicio_4;
 
 public class Candy extends Food {
-
-	public Candy(String nombre, float peso) {
+	private int calorias;
+	
+	public Candy(String nombre, float peso, int calorias) {
 		super(nombre, peso);
-		// TODO Auto-generated constructor stub
+		this.calorias = calorias;
 	}
 
+	@Override
+	public String toString() {
+		return "Candy [calorias=" + calorias + ", nombre=" + nombre + ", peso=" + peso + "]";
+	}
+	
 }
