@@ -18,11 +18,11 @@ public class Passwords {
 	private int length;
 
 	public Passwords() {
-		this.length = 12;
+		this.length = 20;
 	}
 
 	public Passwords(int length) {
-		this.length = Math.max(length, 10);
+		this.length = Math.max(length, 12);
 	}
 
 	public String generate() {
@@ -63,7 +63,7 @@ public class Passwords {
 
 			}
 
-			contraseñaValida = tieneMinusculas && tieneMayusculas && (tieneNumeros || tieneEspeciales);
+			contraseñaValida = tieneMinusculas && tieneMayusculas && tieneNumeros && tieneEspeciales;
 		} while (!contraseñaValida);
 		return password;
 	}
