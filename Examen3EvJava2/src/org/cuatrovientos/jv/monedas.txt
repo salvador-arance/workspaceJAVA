@@ -1,0 +1,8 @@
+Dolar Estadounidense:1.00
+Euro:0.92
+Libra Esterlina:0.79
+Yen Japones:151.45
+Franco Suizo:0.90
+Bitcoin:0.000015
+Peso Mexicano:16.70
+Real Brasileño:5.05
